@@ -10,7 +10,17 @@
 
 <body>
 
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <h1>Lista Email:</h1>
+        <ul>
+            <li v-if="listEmail.length < numEmail">
+                Lista in elaborazione, attendere
+            </li>
+            <li v-else v-for="email in listEmail">
+                {{email}}
+            </li>
+        </ul>
+    </div>
 
 
     <!-- AXIOS CDN -->
